@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Fleet Dashbaord</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>Fleet Dashboard</h2>
+        <div>
+            <button id="exportBtn">Export Json</button>
+            <button id="logoutBtn">Log out</button>
+        </div>
+    </header>
+    <div class="layout">
+        <aside class="sidebar">
+            <h3>Add Fleet</h3>
+            <form id="fleetForm">
+                <label>
+                    Reg No of vehicle *
+                    <input type="text" id="regNo" required placeholder="KA-01-2020">
+                </label>
+                <label>
+                    Category *
+                    <select id="category" required>
+                        <option value="">Select</option>
+                        <option>Auto</option>
+                        <option>Car</option>
+                         <option>Truck</option>
+                        <option>Bus</option>
+                    </select>
+                </label>
+                <label>
+                    Driver Name *
+                    <input type="text" id="driver" required placeholder="Driver Name">
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="isAvailable">Available
+
+                </label>
+                <button type="submit">Add Fleet</button>
+            </form>
+        </aside>
+        <main class="main">
+            <h3>Fleet cards</h3>
+            <div id="cards" class="cards-grid"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
